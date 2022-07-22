@@ -1,6 +1,6 @@
 package com.example.pulsar.template;
 
-import com.example.pulsar.client.PulsarClientHolders.PulsarClientHolder;
+import com.example.pulsar.client.PulsarClientHolder;
 import com.example.pulsar.exception.PulsarBusinessException;
 import com.example.pulsar.properties.MultiPulsarProperties;
 import com.example.pulsar.utils.TopicUtil;

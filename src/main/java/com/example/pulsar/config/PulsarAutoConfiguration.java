@@ -1,6 +1,6 @@
 package com.example.pulsar.config;
 
-import com.example.pulsar.client.PulsarClientHolders.PulsarClientHolder;
+import com.example.pulsar.client.PulsarClientHolder;
 import com.example.pulsar.properties.MultiPulsarProperties;
 import com.example.pulsar.template.PulsarTemplate;
 import lombok.extern.slf4j.Slf4j;
