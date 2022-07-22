@@ -5,8 +5,6 @@ package com.example.pulsar.constant;
  **/
 public final class PulsarConstant {
 
-    private PulsarConstant(){}
-
     /**
      * 间隔符
      */
@@ -19,4 +17,7 @@ public final class PulsarConstant {
      * 非持久化
      */
     public static final String NON_PERSISTENT = "non-persistent://";
+
+    private PulsarConstant() {
+    }
 }

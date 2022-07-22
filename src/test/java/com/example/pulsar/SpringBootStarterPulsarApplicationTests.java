@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
 
 @SpringBootTest(classes = {com.example.pulsar.Application.class})
@@ -18,11 +17,11 @@ class SpringBootStarterPulsarApplicationTests {
     @Test
     public void test() throws PulsarClientException, ExecutionException, InterruptedException {
         pulsarTemplate.createBuilder()
+                .sourceName("second")
                 .persistent(true)
                 .tenant("public")
                 .namespace("default")
                 .topic("my-topic")
                 .send("my-topic");
-        new CountDownLatch(1).await();
     }
 }

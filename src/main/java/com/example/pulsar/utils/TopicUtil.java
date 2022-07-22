@@ -8,19 +8,21 @@ import java.util.StringJoiner;
 
 public final class TopicUtil {
 
-    private TopicUtil(){}
+    private TopicUtil() {
+    }
 
     /**
      * 拼接topic
+     *
      * @return 完整topic路径
      */
-    public static String generateTopic(@NotNull Boolean persistent, @NotBlank String tenant, @NotBlank String namespace, @NotBlank String topic){
+    public static String generateTopic(@NotNull Boolean persistent, @NotBlank String tenant, @NotBlank String namespace, @NotBlank String topic) {
 
         StringJoiner stringJoiner = new StringJoiner(PulsarConstant.PATH_SPLIT);
         stringJoiner.add(tenant).add(namespace).add(topic);
-        if (Boolean.TRUE.equals(persistent)){
+        if (Boolean.TRUE.equals(persistent)) {
             return PulsarConstant.PERSISTENT + stringJoiner;
-        }else {
+        } else {
             return PulsarConstant.NON_PERSISTENT + stringJoiner;
         }
     }
