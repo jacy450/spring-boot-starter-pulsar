@@ -1,4 +1,4 @@
-package com.example.pulsar.client.PulsarClientHolders;
+package com.example.pulsar.client;
 
 import com.example.pulsar.exception.PulsarAutoConfigException;
 import com.example.pulsar.properties.MultiPulsarProperties;
