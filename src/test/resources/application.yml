@@ -1,0 +1,7 @@
+pulsar:
+  service-url: pulsar://192.168.73.129:6650
+  tenant: public
+  operation-timeout: 3000
+  io-threads: 5
+  listenerThreads: 5
+  namespace: default
